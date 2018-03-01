@@ -1,27 +1,27 @@
 #include <iostream>
-#include <list>
+#include <list>;
 
 using namespace std;
-void numbers()
+void nums()
 {
-    list <double> nums;
-    nums.push_back(4.3);
-    nums.push_back(5.6);
-    nums.push_front(2.2);
-    nums.push_front(1.9);
-    list<double>::iterator it;
-    it=nums.begin();
-    it++;
-    it++;
-    nums.insert(it,3.5);
-    while(it!=nums.end())
+    int sum=0;
+    list <int>number;
+    number.push_front(3);
+    number.push_front(1);
+    number.push_back(5);
+    number.push_back(7);
+    list<int>::iterator it;
+    it = number.begin();
+    for(int i=0;i<=3;i++)
     {
         cout<<*it<<" ";
+        sum=sum+*it;
         it++;
     }
+    cout<<"sum="<<sum;
 }
 
 int main()
 {
-   numbers();
+    nums();
 }
